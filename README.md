@@ -2,6 +2,8 @@
 
 **Maintain your CV at a higher level of abstraction using coding agents.**
 
+**Star** this repo to bookmark it for later. **Fork** it to start building your own agentic CV workflow.
+
 ---
 
 ## Motivation
@@ -91,19 +93,3 @@ Install [LaTeX Workshop extension](https://marketplace.visualstudio.com/items?it
 
 Currently, these manual setup instructions are documented for **Mac ARM only**. Contributions for other platforms (Mac Intel, Windows, Linux) are welcome.
 
-### Coding Agent Limitations
-
-The dev container is configured for LaTeX compilation only. Coding agents are **not** installed in the container image, so:
-
-- Coding agents inside the dev container won't work
-- VS Code-bound coding agents (like Cursor or GitHub Copilot Chat) won't have access to the container environment
-
-**Workaround:** Run your coding agent CLI (e.g., Claude Code) in a separate terminal outside VS Code. The agent can still read and edit files in your project directory while the dev container handles LaTeX compilation.
-
----
-
-## Start Building
-
-**Star** this repo to bookmark it for later.
-
-**Fork** it to start building your own agentic CV workflow.
