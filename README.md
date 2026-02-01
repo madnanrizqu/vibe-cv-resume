@@ -79,6 +79,7 @@
 
 ### Setup (Manual)
 
+Currently, these manual setup instructions are documented for **Mac ARM only**. Contributions for other platforms (Mac Intel, Windows, Linux) are welcome.
 Install [LaTeX Workshop extension](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) for VS Code.
 
 #### Mac ARM
