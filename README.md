@@ -79,7 +79,6 @@
 
 ### Setup (Manual)
 
-Currently, these manual setup instructions are documented for **Mac ARM only**. Contributions for other platforms (Mac Intel, Windows, Linux) are welcome.
 Install [LaTeX Workshop extension](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) for VS Code.
 
 #### Mac ARM
@@ -89,6 +88,8 @@ Install [LaTeX Workshop extension](https://marketplace.visualstudio.com/items?it
    - **bash/zsh:** `eval "$(/usr/libexec/path_helper)"`
    - **other shells:** add `/usr/local/texlive/YYYY/bin/universal-darwin` to PATH (replace `YYYY` with your installed TeX Live version year)
 3. Verify installation: `latexmk -pdf v1/master.tex`
+
+Currently, these manual setup instructions are documented for **Mac ARM only**. Contributions for other platforms (Mac Intel, Windows, Linux) are welcome.
 
 ### Coding Agent Limitations
 
