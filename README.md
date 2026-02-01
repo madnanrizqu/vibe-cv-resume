@@ -67,16 +67,29 @@
 
 ### Prerequisites
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [VS Code](https://code.visualstudio.com/)
-- [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
-### Setup
+### Setup (Dev Container)
 
-1. Fork this repository
-2. Clone your fork and open in VS Code
-3. Click **"Reopen in Container"** when prompted
-4. Edit `v1/master.tex` and save - your PDF appears automatically
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+2. Fork this repository
+3. Clone your fork and open in VS Code
+4. Click **"Reopen in Container"** when prompted
+5. Edit `v1/master.tex` and save - your PDF appears automatically
+
+### Setup (Manual)
+
+Install [LaTeX Workshop extension](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) for VS Code.
+
+#### Mac ARM
+
+1. `brew install --cask mactex-no-gui`
+2. Add TeX to PATH:
+   - **bash/zsh:** `eval "$(/usr/libexec/path_helper)"`
+   - **other shells:** add `/usr/local/texlive/YYYY/bin/universal-darwin` to PATH (replace `YYYY` with your installed TeX Live version year)
+3. Verify installation: `latexmk -pdf v1/master.tex`
+
+Currently, these manual setup instructions are documented for **Mac ARM only**. Contributions for other platforms (Mac Intel, Windows, Linux) are welcome.
 
 ### Coding Agent Limitations
 
