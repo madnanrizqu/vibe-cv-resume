@@ -1,0 +1,36 @@
+{
+  "name": "LaTeX CV Resume",
+  "image": "qmcgaw/latexdevcontainer:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "james-yu.latex-workshop",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "latex-workshop.latex.autoBuild.run": "onSave",
+        "latex-workshop.latex.autoClean.run": "onBuilt",
+        "latex-workshop.latex.clean.subfolder.enabled": true,
+        "latex-workshop.linting.chktex.enabled": true,
+        "latex-workshop.latex.recipes": [
+          { "name": "latexmk (lualatex)", "tools": ["lualatex"] },
+          { "name": "latexmk (pdflatex)", "tools": ["pdflatex"] }
+        ],
+        "latex-workshop.latex.tools": [
+          {
+            "name": "lualatex",
+            "command": "latexmk",
+            "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "-gg", "-lualatex", "-outdir=%OUTDIR%", "%DOC%"]
+          },
+          {
+            "name": "pdflatex",
+            "command": "latexmk",
+            "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "-pdf", "-outdir=%OUTDIR%", "%DOC%"]
+          }
+        ],
+        "latex-workshop.view.pdf.viewer": "tab"
+      }
+    }
+  },
+  "postCreateCommand": "tlmgr update --self && tlmgr install preprint titlesec marvosym enumitem fontawesome5 fira contour ulem tex-gyre luatexbase xkeyval fontspec"
+}
