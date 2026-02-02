@@ -1,8 +1,8 @@
 # CV Resume Agentic Building
 
-**Maintain your CV at a higher level of abstraction using coding agents.**
+Maintain your CV at a higher level of abstraction using coding agents.
 
-<video src="demo.mp4" controls="controls" muted="muted" width="600"></video>
+<video src="https://github.com/madnanrizqu/vibe-cv-resume/raw/main/demo.mp4" controls="controls" muted="muted" width="600"></video>
 
 ---
 
