@@ -1,0 +1,30 @@
+name: Link PR to Issue
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  link-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment with linked issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const branch = context.payload.pull_request.head.ref;
+            const match = branch.match(/\/(\d+)\//);
+            if (!match) {
+              throw new Error(`Branch "${branch}" does not contain an issue number. Rename it to follow the pattern: <type>/<issue-number>/<description> (e.g. chore/11/init-release-system), or link the issue manually and re-run this check.`);
+            }
+            const issueNumber = match[1];
+            const issueUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/issues/${issueNumber}`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: `Related issue: ${issueUrl}`,
+            });
