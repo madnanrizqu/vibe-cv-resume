@@ -93,3 +93,9 @@ Install [LaTeX Workshop extension](https://marketplace.visualstudio.com/items?it
 
 Currently, these manual setup instructions are documented for **Mac ARM only**. Contributions for other platforms (Mac Intel, Windows, Linux) are welcome.
 
+---
+
+## Releases
+
+See the GitHub Releases tab for version history and release notes.
+
