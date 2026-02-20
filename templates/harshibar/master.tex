@@ -1,208 +1,55 @@
-%-------------------------
-% Resume in Latex
-% Author : Harshibar
-% Based off of: https://github.com/jakeryang/resume
-% License : MIT
-%------------------------
-
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-% only for pdflatex
-% \input{glyphtounicode}
-
-% fontawesome
-\usepackage{fontawesome5}
-
-% fixed width
-\usepackage[scale=0.90,lf]{FiraMono}
-
-% light-grey
-\definecolor{light-grey}{gray}{0.83}
-\definecolor{dark-grey}{gray}{0.3}
-\definecolor{text-grey}{gray}{.08}
-
-\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
-\DeclareTextFontCommand{\texteb}{\ebseries}
-
-% custom underilne
-\usepackage{contour}
-\usepackage[normalem]{ulem}
-\renewcommand{\ULdepth}{1.8pt}
-\contourlength{0.8pt}
-\newcommand{\myuline}[1]{%
-  \uline{\phantom{#1}}%
-  \llap{\contour{white}{#1}}%
-}
-
-
-% custom font: helvetica-style
-\usepackage{tgheros}
-\renewcommand*\familydefault{\sfdefault}
-%% Only if the base font of the document is to be sans serif
-\usepackage[T1]{fontenc}
-
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{0in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \bfseries \vspace{-8pt} \raggedright \large % header section
-}{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
-
-% only for pdflatex
-% Ensure that generate pdf is machine readable/ATS parsable
-% \pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-1pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{4pt}\item
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
-      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
-    \end{tabular*}\vspace{-4pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-% CHANGED default leftmargin  0.15 in
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, topsep=0pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
-
-\color{text-grey}
+\input{preamble}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{document}
 
 %----------HEADING----------
 \noindent
-\textbf{\LARGE Budi Santoso} \\
+\textbf{\LARGE John Doe} \\
 \vspace{4pt}
-\small +62 XXX XXXX XXXX | \href{mailto:XXX@email.com}{budi.santoso@email.com} | \href{https://linkedin.com/in/xxx}{\myuline{LinkedIn}} | \href{https://github.com/xxx}{\myuline{GitHub}} | \href{https://xxx.dev}{\myuline{Portfolio}}
+\small +1 234 567 8900 | \href{mailto:john.doe@email.com}{john.doe@email.com} | \href{https://linkedin.com/in/johndoe}{\myuline{LinkedIn}} | \href{https://github.com/johndoe}{\myuline{GitHub}} | \href{https://johndoe.dev}{\myuline{Portfolio}}
 
 \vspace{4pt}
-\noindent\small{Senior Software Engineer with 5+ years building scalable web applications across fintech, e-commerce, and enterprise sectors. Proven expertise in frontend architecture, performance optimization, and leading cross-functional engineering teams. Passionate about developer experience and delivering high-impact solutions.}
+\noindent\small{Experienced software engineer with expertise in full-stack development. Strong background in building scalable applications and leading technical teams.}
 
 %-----------EXPERIENCE-----------
 \section{Professional Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Tiket.com}{Jakarta, Indonesia}
-      {Senior Frontend Engineer | React, TypeScript, GraphQL, Node.js}{Mar 2024 -- Present}
+      {Tech Company A}{City, Country}
+      {Senior Software Engineer | Technology Stack}{Jan 2023 -- Present}
       \vspace{2pt}\\
-      {\small\textit{Indonesia's leading online travel and entertainment booking platform.}}
+      {\small\textit{Description of company and industry.}}
       \resumeItemListStart
-        \resumeItem{Reduced booking flow load time by 35\% by redesigning the page loading pipeline using React Suspense and lazy loading patterns.}
-        \resumeItem{Architected a micro-frontend system serving 5M+ monthly users by implementing Module Federation with Webpack 5 and React.}
-        \resumeItem{Decreased API response handling time by 40\% by migrating REST endpoints to GraphQL with Apollo Client.}
-        \resumeItem{Improved mobile web performance score from 45 to 85 by implementing code splitting, lazy loading, and image optimization strategies.}
+        \resumeItem{Implemented feature X that improved system performance by Y\%.}
+        \resumeItem{Led team of Z engineers to deliver project on time and under budget.}
+        \resumeItem{Architected solution that reduced latency and improved user experience.}
+        \resumeItem{Mentored junior developers and established best practices.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Institut Teknologi Bandung}{Bandung, Indonesia}
-      {AI Research Assistant | Python, HuggingFace, OpenAI API, LangChain}{Aug 2022 -- Feb 2024}
+      {Tech Company B}{City, Country}
+      {Software Engineer | Technology Stack}{Jun 2021 -- Dec 2022}
       \vspace{2pt}\\
-      {\small\textit{AI and Machine Learning Research Lab at School of Electrical Engineering and Informatics.}}
+      {\small\textit{Description of company and industry.}}
       \resumeItemListStart
-        \resumeItem{Published research paper on Indonesian NLP by fine-tuning LLaMA and GPT models for low-resource language tasks using HuggingFace Transformers.}
-        \resumeItem{Built RAG-based question answering system achieving 88\% accuracy by integrating OpenAI embeddings with FAISS vector store and LangChain.}
-        \resumeItem{Developed prompt engineering framework reducing hallucination rate by 40\% through chain-of-thought and few-shot learning techniques.}
-        \resumeItem{Created automated evaluation pipeline for LLM outputs by implementing Python scripts with OpenAI API and HuggingFace datasets.}
+        \resumeItem{Developed features using modern web technologies.}
+        \resumeItem{Collaborated with cross-functional teams to deliver high-quality products.}
+        \resumeItem{Optimized application performance and reduced technical debt.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Bukalapak}{Jakarta, Indonesia}
-      {Software Engineer, Frontend | Next.js, React, TypeScript, Redis}{Jan 2021 -- Jul 2022}
+      {Tech Company C}{City, Country}
+      {Junior Developer | Technology Stack}{Jan 2020 -- May 2021}
       \vspace{2pt}\\
-      {\small\textit{One of Indonesia's leading e-commerce marketplaces and digital payment platforms.}}
+      {\small\textit{Description of company and industry.}}
       \resumeItemListStart
-        \resumeItem{Boosted search page load speed by 55\% by implementing server-side rendering with Next.js.}
-        \resumeItem{Increased seller dashboard adoption by 30\% by leading a team of 3 engineers to rebuild the interface using React and TypeScript.}
-        \resumeItem{Reduced production bugs by 60\% by championing TypeScript strict mode adoption across 12 frontend repositories.}
-        \resumeItem{Automated 8 manual deployment processes by building CI/CD pipelines using GitHub Actions and Docker.}
-        \resumeItem{Mentored 4 junior developers through pair programming sessions, resulting in 2 promotions within the team.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Mekari}{Jakarta, Indonesia}
-      {Frontend Developer | Vue.js, Nuxt.js, TypeScript, Storybook}{Feb 2020 -- Dec 2020}
-      \vspace{2pt}\\
-      {\small\textit{HR and accounting SaaS platform for SMEs.}}
-      \resumeItemListStart
-        \resumeItem{Accelerated feature delivery by 35\% by building a shared component library with 50+ reusable components using Vue.js and Storybook.}
-        \resumeItem{Reduced customer support tickets by 25\% by redesigning the onboarding flow based on user research and analytics data.}
-        \resumeItem{Improved developer onboarding time from 2 weeks to 3 days by creating comprehensive documentation and coding standards.}
-        \resumeItem{Migrated legacy jQuery codebase to Vue.js, eliminating 15K lines of technical debt and improving maintainability.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Xtremax}{Bandung, Indonesia}
-      {Junior Frontend Developer | React, JavaScript, SASS, Webpack}{Jun 2019 -- Jan 2020}
-      \vspace{2pt}\\
-      {\small\textit{Regional digital agency specializing in web and mobile applications for government and enterprise clients.}}
-      \resumeItemListStart
-        \resumeItem{Delivered 6 client projects on time by developing responsive web applications using React and SASS.}
-        \resumeItem{Reduced bundle size by 45\% by configuring Webpack code splitting and tree shaking for production builds.}
-        \resumeItem{Improved website accessibility scores to WCAG AA compliance by implementing semantic HTML and ARIA attributes.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Freelance}{Remote, Indonesia}
-      {Web Developer | HTML, CSS, JavaScript, WordPress}{Jan 2018 -- May 2019}
-      \vspace{2pt}\\
-      {\small\textit{Independent freelance web development.}}
-      \resumeItemListStart
-        \resumeItem{Completed 12 freelance projects with 5-star ratings by delivering custom WordPress themes and landing pages.}
-        \resumeItem{Generated Rp 50M+ in client revenue by building e-commerce websites with WooCommerce integration.}
+        \resumeItem{Built responsive web applications using modern frameworks.}
+        \resumeItem{Participated in code reviews and learned best practices.}
+        \resumeItem{Contributed to multiple successful project deliveries.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -212,11 +59,8 @@
 \section {Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Institut Teknologi Bandung}{2022 -- 2024}
-      {M.Kom. Computer Science (3.85/4.00)}{Indonesia}
-    \resumeSubheading
-      {Universitas Padjadjaran}{2014 -- 2018}
-      {S.Kom. Informatics (3.65/4.00)}{Indonesia}
+      {University Name}{2018 -- 2022}
+      {Bachelor of Science in Computer Science (3.8/4.0)}{Location}
   \resumeSubHeadingListEnd
 
 
@@ -225,15 +69,12 @@
 \section{Skills}
  \begin{itemize}[leftmargin=0in, label={}]
     \small{\item{
-     \textbf{Frontend:} React.js, Next.js, Vue.js, Nuxt.js, TypeScript, JavaScript, HTML5, CSS3 \\
-     \textbf{Styling:} Tailwind CSS, SASS, Styled Components, Material UI, Ant Design \\
-     \textbf{State Management:} Redux, Zustand, React Query, Vuex \\
-     \textbf{Backend:} Node.js, Express.js, Python, Go \\
-     \textbf{Testing:} Jest, Cypress, Playwright, React Testing Library \\
-     \textbf{DevOps:} Docker, Kubernetes, AWS, GCP, GitHub Actions, Jenkins \\
-     \textbf{Databases:} PostgreSQL, MongoDB, Redis, GraphQL \\
-     \textbf{Tools:} Git, Webpack, Vite, Figma, Jira \\
-     \textbf{Methodologies:} Agile, Scrum, CI/CD, TDD, Code Review
+     \textbf{Languages:} JavaScript, TypeScript, Python, Java, Go \\
+     \textbf{Frontend:} React, Vue, Angular, HTML5, CSS3 \\
+     \textbf{Backend:} Node.js, Express, Django, Spring Boot \\
+     \textbf{Database:} PostgreSQL, MongoDB, Redis, MySQL \\
+     \textbf{DevOps:} Docker, Kubernetes, AWS, CI/CD \\
+     \textbf{Tools:} Git, VS Code, Jira, Figma
     }}
  \end{itemize}
 
