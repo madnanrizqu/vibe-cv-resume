@@ -74,7 +74,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \bfseries \vspace{2pt} \raggedright \large % header section
+  \bfseries \vspace{-8pt} \raggedright \large % header section
 }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
 
 % only for pdflatex
@@ -90,7 +90,7 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{4pt}\item
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
       \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
@@ -104,28 +104,14 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      #1 & {\color{dark-grey}} \\
-    \end{tabular*}\vspace{-4pt}
-}
-
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\newcommand{\resumeSimpleEntry}[2]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & {\color{dark-grey}\small #2}\\
-    \end{tabular*}\vspace{-4pt}
-}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 % CHANGED default leftmargin  0.15 in
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, topsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 
 \color{text-grey}
@@ -139,12 +125,11 @@
 %----------HEADING----------
 \noindent
 \textbf{\LARGE Budi Santoso} \\
+\vspace{4pt}
 \small +62 XXX XXXX XXXX | \href{mailto:XXX@email.com}{budi.santoso@email.com} | \href{https://linkedin.com/in/xxx}{\myuline{LinkedIn}} | \href{https://github.com/xxx}{\myuline{GitHub}} | \href{https://xxx.dev}{\myuline{Portfolio}}
-\vspace{10pt}
 
 \vspace{4pt}
-\noindent\small{Software Engineer with 5+ years building scalable applications across AI, e-commerce, and enterprise sectors. Proven expertise in Python, LLM integration, and full-stack architecture. Experience with prompt engineering, RAG systems, and CI/CD automation. Passionate about developer experience and delivering high-impact technical solutions.}
-\vspace{6pt}
+\noindent\small{Senior Software Engineer with 5+ years building scalable web applications across fintech, e-commerce, and enterprise sectors. Proven expertise in frontend architecture, performance optimization, and leading cross-functional engineering teams. Passionate about developer experience and delivering high-impact solutions.}
 
 %-----------EXPERIENCE-----------
 \section{Professional Experience}
