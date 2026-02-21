@@ -6,9 +6,6 @@
 *.out
 *.synctex.gz
 
-# LaTeX output
-*.pdf
-
 # Other LaTeX files
 *.toc
 *.lof
