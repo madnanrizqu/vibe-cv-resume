@@ -1,0 +1,132 @@
+%-------------------------
+% Resume Preamble - Gergely Template
+% Based on Pragmatic Engineer style
+% License : MIT
+%------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% Colors
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+\definecolor{heading-blue}{RGB}{26, 115, 232}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underline
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.625in}
+\addtolength{\evensidemargin}{-0.625in}
+\addtolength{\textwidth}{1.25in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+% REMOVED \raggedright for justified text
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - Blue color for section headings
+\titleformat{\section}{
+  \color{heading-blue}\bfseries \vspace{-8pt} \raggedright \large
+}{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+% THREE-COLUMN layout for gergely style:
+% Row 1: Job Title (left) | Company (center, absolute) | Date (right)
+% Row 2: Location (centered)
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}
+  \item
+    \noindent
+    \rlap{\textbf{#1}}%
+    \hfill
+    \raisebox{0pt}[0pt][0pt]{\makebox[0pt]{\textbf{#2}}}%
+    \hfill
+    \llap{{\color{dark-grey}\small #3}}\\[2pt]
+    \begin{tabular*}{\textwidth}[t]{c}
+      {\small #4}\\
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[1]{
+    \item
+    {#1}
+    \vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+% Single-line entries for education/simple entries
+\newcommand{\resumeSimpleEntry}[3]{
+  \item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1}, #2 & {\color{dark-grey}\small #3}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% Filled round bullet for items
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{0.25pt}}
+% Filled bullet style (●)
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label=$\bullet$]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\color{text-grey}
